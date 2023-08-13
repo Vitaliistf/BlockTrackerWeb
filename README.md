@@ -1,3 +1,4 @@
+![wide-logo.jpg](img%2Fwide-logo.jpg)
 # BlockTrackerWeb Application
 
 > This repository contains my "BlockTracker" project. The application is designed to track cryptocurrency investments.
