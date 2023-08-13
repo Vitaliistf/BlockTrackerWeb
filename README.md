@@ -54,6 +54,7 @@ The application utilizes the following technologies:
 - Maven
 - Lombok
 - Spring Boot
+- Spring MVC
 - Spring Security
 - Spring JavaMail
 - Thymeleaf
