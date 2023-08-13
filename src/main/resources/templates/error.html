@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Error · BlockTracker</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/short_logo_icon_32.png" sizes="32x32" type="image/png">
+</head>
+<body>
+<div class="higher-block">
+    <div class="text-center">
+        <p class="fw-bold text-danger">Oops!</p>
+        <h1 th:text="${status}" class="display-1 fw-bold">Status</h1>
+        <p th:text="${error}" class="fs-3">Error</p>
+        <p th:text="${message}" class="lead">Message</p>
+        <a href="/" class="btn btn-outline-dark">Home</a>
+    </div>
+</div>
+</body>
+</html>

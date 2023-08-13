@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="transactions">
+    <meta charset="UTF-8">
+    <title>Transactions · BlockTracker</title>
+</head>
+<body th:fragment="transactions">
+<div class="modal fade" id="transactions-window" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Transactions</h5>
+                <button type="button" class="btn-close" id="close-transactions-window"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Buy/Sell</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                        </thead>
+                        <tbody id="transaction-table">
+                        <!--POPULATED WITH JS-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

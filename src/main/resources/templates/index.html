@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home · BlockTracker</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/short_logo_icon_32.png" sizes="32x32" type="image/png">
+</head>
+<body>
+<div th:replace="common/navbar :: navbar"></div>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary higher-block">
+    <div class="col-md-6 p-lg-5 mx-auto my-5">
+        <h1 class="display-3 fw-bold">Designed for investors</h1>
+        <h3 class="fw-normal text-muted mb-3">
+            Keep track of your cryptocurrency investments with ease using BlockTracker
+        </h3>
+        <a th:if="!${#request.userPrincipal}" href="/signup" class="btn btn-dark">Try it now!</a>
+    </div>
+</div>
+<div th:replace="common/footer :: footer"></div>
+</body>
+</html>

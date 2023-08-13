@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="add-watchlist-item">
+    <meta charset="UTF-8">
+    <title>Add watchlist item · BlockTracker</title>
+</head>
+<body th:fragment="add-watchlist-item">
+<div class="modal fade" id="add-watchlist-item-window" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add to watchlist</h5>
+            </div>
+            <div class="modal-body">
+                <form id="add-watchlist-item-form">
+                    <div class="form-group">
+                        <label for="watchlist-item-symbol">Enter coin symbol</label>
+                        <input type="text" class="form-control" id="watchlist-item-symbol" placeholder="BTC">
+                    </div>
+                </form>
+                <p id="add-watchlist-item-errors" class="alert alert-danger text-center" style="display: none;"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" id="close-add-watchlist-item-window">Close</button>
+                <button type="submit" class="btn btn-dark" form="add-watchlist-item-form">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help · BlockTracker</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/short_logo_icon_32.png" sizes="32x32" type="image/png">
+</head>
+<body>
+<div th:replace="common/navbar :: navbar"></div>
+<div class="d-flex justify-content-center">
+    <div class="container m-md-3 pt-3 pb-3 bg-body-tertiary rounded">
+        <div class="text-center">
+            <h1 class="fw-bold">BlockTracker Help Center</h1>
+            <p>Welcome to the help center of our website. Here you can find FAQ and contacts.</p>
+            <h2 class="fw-bold">FAQ</h2>
+        </div>
+        <ul>
+            <li>
+                <h3 class="fw-bold">How to register?</h3>
+                <p>In order, to register an account you need to go to <a href="/signup">register</a>
+                    page and fill in all the fields and follow instructions. You will need to confirm the registration
+                    through a letter that will come to your e-mail, and then you will be able to log in and start
+                    using our service.</p>
+                <strong>OR</strong>
+                <p>You may just sign up using Google or Binance account by clicking on the icons below.</p>
+            </li>
+            <li>
+                <h3 class="fw-bold">How to change password?</h3>
+                <p>If you need to change password, you can go to the login page and click
+                    <strong>Forgot password?</strong>
+                    fill in your e-mail and new password, then confirm that the account is really yours, and you will be
+                    able to log in using new password.</p>
+            </li>
+            <li>
+                <h3 class="fw-bold">Which coins are supported?</h3>
+                <p>Our service is working with KuCoin API, so we support all the coins that are supported on KuCoin.</p>
+            </li>
+        </ul>
+        <div class="text-center">
+            <h2 class="fw-bold">How to contact us?</h2>
+            <p>Contact us if you're experiencing any problems, or cannot find your question:</p>
+            <a class="fw-bold">E-mail: deosplayt@gmail.com</a>
+        </div>
+    </div>
+</div>
+<div th:replace="common/footer :: footer"></div>
+</body>
+</html>

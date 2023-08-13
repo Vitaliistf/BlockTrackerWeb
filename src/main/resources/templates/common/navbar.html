@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="navbar">
+    <meta charset="UTF-8">
+    <title>Navbar · BlockTracker</title>
+</head>
+<body>
+<nav th:fragment="navbar" class="navbar navbar-expand-md bg-dark sticky-top border-bottom">
+    <div class="container">
+        <ul class="navbar-nav flex-grow-1 justify-content-around align-items-center fw-bold">
+            <li class="nav-item"><a class="nav-link" href="/">
+                <img src="/img/wide_logo_white.png" height="45" width="110" alt="logo">
+            </a></li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/watchlist">Watchlist</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/portfolios">Portfolios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/help">Help</a>
+            </li>
+
+            <li class="nav-item"><a></a></li>
+            <li th:if="${#request.userPrincipal}" class="nav-item">
+                <a></a>
+            </li>
+            <li th:if="${#request.userPrincipal}" class="nav-item">
+                <form th:action="@{/logout}" th:method="POST">
+                    <input class="btn btn-outline-light" type="submit" value="Log out"/>
+                </form>
+            </li>
+
+            <li th:if="!${#request.userPrincipal}" class="nav-item">
+                <a class="btn btn-outline-light" href="/login">Log in</a>
+            </li>
+            <li th:if="!${#request.userPrincipal}" class="nav-item">
+                <a class="btn btn-light" href="/signup">Sign up</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+</body>
+</html>

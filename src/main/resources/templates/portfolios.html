@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolios · BlockTracker</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/short_logo_icon_32.png" sizes="32x32" type="image/png">
+</head>
+<body>
+<div th:replace="common/navbar :: navbar"></div>
+<div class="container py-5" style="min-height: 75vh;">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="d-flex justify-content-between">
+                <h3>Portfolios</h3>
+                <div>
+                    <div>
+                        <button type="button" class="btn btn-outline-dark" id="new-portfolio-pop-up-button">
+                            New portfolio
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <ul id="portfolio-list" class="py-3 list-group portfolio-list" style="cursor: pointer;">
+                <!-- POPULATED WITH JS -->
+            </ul>
+        </div>
+        <div class="col-md-8" style="min-height: 75vh; border-left: 1px solid rgb(33,37,41);">
+            <div class="higher-block" id="portfolio-part-closed">
+                <h3 class="fw-bold text-center">Choose or create portfolio</h3>
+            </div>
+            <div id="portfolio-part-open" style="display: none;">
+                <div class="row">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <button type="button" class="btn btn-outline-dark mr-2" id="edit-portfolio-pop-up-button">
+                                Edit portfolio
+                            </button>
+                            <button type="button" class="btn btn-dark" id="add-transaction-pop-up-button">
+                                Add transaction
+                            </button>
+                        </div>
+                        <h3 id="total-value"></h3>
+                    </div>
+                </div>
+                <div id="coin-part-open" style="display: none;">
+                    <h3 class="fw-bold text-center">Holdings</h3>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Coin</th>
+                            <th>Price</th>
+                            <th>Average buy price</th>
+                            <th>Amount</th>
+                            <th>Current value</th>
+                            <th>P/L</th>
+                        </tr>
+                        </thead>
+                        <tbody class="py-2" id="portfolio-details" style="cursor: pointer;">
+                        <!-- POPULATED WITH JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="py-5 higher-block" id="coin-part-closed">
+                    <h3 class="fw-bold text-center">You don't have any asset here. Add new transaction.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="common/footer :: footer"></div>
+<div th:replace="pop-ups/new-portfolio :: new-portfolio"></div>
+<div th:replace="pop-ups/edit-portfolio :: edit-portfolio"></div>
+<div th:replace="pop-ups/add-transaction :: add-transaction"></div>
+<div th:replace="pop-ups/transactions :: transactions"></div>
+
+<script src="/js/jquery-3.7.0.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/portfolios.js"></script>
+<script src="/js/new-portfolio.js"></script>
+<script src="/js/add-transaction.js"></script>
+<script src="/js/edit-portfolio.js"></script>
+<script src="/js/transactions.js"></script>
+</body>
+</html>
+
+

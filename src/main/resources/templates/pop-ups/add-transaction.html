@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="add-transaction">
+    <meta charset="UTF-8">
+    <title>Add transaction · BlockTracker</title>
+</head>
+<body th:fragment="add-transaction">
+<div class="modal fade" id="add-transaction-window" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add new transaction</h5>
+            </div>
+            <div class="modal-body">
+                <form id="add-transaction-form">
+                    <div class="form-group">
+                        <label for="symbol">Symbol</label>
+                        <input type="text" class="form-control" id="symbol" placeholder="BTC">
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="text" class="form-control" id="amount" placeholder="0.0001">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="text" class="form-control" id="price" placeholder="60000">
+                    </div>
+
+                    <div class="d-flex justify-content-around">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio-options" id="buy-radio"
+                                   value="buy" checked>
+                            <label class="form-check-label" for="buy-radio">Buy</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio-options" id="sell-radio"
+                                   value="sell">
+                            <label class="form-check-label" for="sell-radio">Sell</label>
+                        </div>
+                    </div>
+                </form>
+                <p id="add-transaction-errors" class="alert alert-danger text-center" style="display: none;"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" id="close-add-transaction-window">Close</button>
+                <button type="submit" class="btn btn-dark" form="add-transaction-form">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

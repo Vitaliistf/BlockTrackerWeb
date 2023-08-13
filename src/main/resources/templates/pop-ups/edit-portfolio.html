@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="edit-portfolio">
+    <meta charset="UTF-8">
+    <title>Edit portfolio · BlockTracker</title>
+</head>
+<body th:fragment="edit-portfolio">
+<div class="modal fade" id="edit-portfolio-window" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit portfolio</h5>
+            </div>
+            <div class="modal-body">
+                <form id="edit-portfolio-form">
+                    <div class="form-group">
+                        <label for="edit-portfolio-name">Enter portfolio name</label>
+                        <input type="text" class="form-control" id="edit-portfolio-name" placeholder="my_portfolio">
+                    </div>
+                </form>
+                <p id="edit-portfolio-errors" class="alert alert-danger text-center" style="display: none;"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" id="close-edit-portfolio-window">Close</button>
+                <button type="button" id="delete-portfolio-button" class="btn btn-danger">Delete portfolio</button>
+                <button type="submit" class="btn btn-dark" form="edit-portfolio-form">Edit</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="new-portfolio">
+    <meta charset="UTF-8">
+    <title>New portfolio · BlockTracker</title>
+</head>
+<body th:fragment="new-portfolio">
+<div class="modal fade" id="new-portfolio-window" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create new portfolio</h5>
+            </div>
+            <div class="modal-body">
+                <form id="new-portfolio-form">
+                    <div class="form-group">
+                        <label for="new-portfolio-name">Enter portfolio name</label>
+                        <input type="text" class="form-control" id="new-portfolio-name" placeholder="my_portfolio">
+                    </div>
+                </form>
+                <p id="new-portfolio-errors" class="alert alert-danger text-center" style="display: none;"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" id="close-new-portfolio-window">Close</button>
+                <button type="submit" class="btn btn-dark" form="new-portfolio-form">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

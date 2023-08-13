@@ -1,0 +1,33 @@
+.text-insert {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.text-insert::before,
+.text-insert::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.text-insert span {
+    padding: 0 10px;
+}
+
+.navbar .nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.portfolio-list .list-group-item.active {
+    background-color: rgb(33, 37, 41);
+    color: rgb(255, 255, 255);
+}
+
+.higher-block {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

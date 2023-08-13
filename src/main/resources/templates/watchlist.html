@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/short_logo_icon_32.png" sizes="32x32" type="image/png">
+</head>
+<body>
+<div th:replace="common/navbar :: navbar"></div>
+<div class="container py-5" style="min-height: 75vh;">
+    <div class="row">
+        <div class="d-flex justify-content-between">
+            <h3>My watchlist</h3>
+            <button type="button" class="btn btn-outline-dark" id="add-watchlist-item-pop-up-button">Add coin</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="higher-block" id="watchlist-part-closed">
+            <h3 class="fw-bold text-center">Add first coin to your watchlist.</h3>
+        </div>
+        <div id="watchlist-part-open" style="display: none;">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Coin</th>
+                    <th>Price</th>
+                    <th>Change rate 24h</th>
+                    <th>Change price 24h</th>
+                    <th>High 24h</th>
+                    <th>Low 24h</th>
+                    <th>Volume 24h</th>
+                    <th>Volume value 24h</th>
+                </tr>
+                </thead>
+                <tbody class="py-2" id="watchlist-details">
+                <!-- POPULATED WITH JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div th:replace="common/footer :: footer"></div>
+<div th:replace="pop-ups/add-watchlist-item :: add-watchlist-item"></div>
+
+<script src="/js/jquery-3.7.0.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/add-watchlist-item.js"></script>
+<script src="/js/watchlist.js"></script>
+
+</body>
+</html>
+
+

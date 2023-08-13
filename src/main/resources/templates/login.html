@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Log in · BlockTracker</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/short_logo_icon_32.png" sizes="32x32" type="image/png">
+</head>
+<body>
+<div th:replace="common/navbar :: navbar"></div>
+<form name="f" method="post" action="/process_login" class="gradient-custom">
+    <!--    Next line should be uncommented in production-->
+    <!--   <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>-->
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <h2 class="fw-bold mb-2 text-uppercase">Log in</h2>
+                            <p class="text-white-50 mb-5">You are one step closer to your portfolio!</p>
+                            <p th:if="${param.error}" class="alert alert-danger">Incorrect email or password.</p>
+                            <div class="form-outline form-white mb-4">
+                                <input placeholder="Email" name="username" type="text" id="username"
+                                       class="form-control form-control-lg"/>
+                            </div>
+                            <div class="form-outline form-white mb-4">
+                                <input placeholder="Password" name="password" type="password" id="password"
+                                       class="form-control form-control-lg"/>
+                            </div>
+                            <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="/forgot_password">
+                                Forgot password?</a></p>
+                            <button class="btn btn-outline-light btn-lg px-5" type="submit">Log in</button>
+                            <p class="small mb-5">
+                            <div class="text-insert">
+                                <span>OR</span>
+                            </div>
+                            </p>
+
+                            <div class="d-flex justify-content-center text-center mt-5 pt-1">
+                                <a href="/oauth2/authorization/google" class="text-white mx-4 px-2">
+                                    <img src="/img/google-logo.svg">
+                                </a>
+                                <a href="/coming_soon" class="text-white mx-4 px-2">
+                                    <img src="/img/binance-logo.svg">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="mb-0">Don't have an account? <a href="/signup" class="text-white-50 fw-bold">
+                                Sign Up
+                            </a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div th:replace="common/footer :: footer"></div>
+</body>
+</html>
